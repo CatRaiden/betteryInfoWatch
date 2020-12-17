@@ -87,7 +87,7 @@ extension ViewController: CBPeripheralDelegate {
     func peripheral(_ peripheral: CBPeripheral, didUpdateValueFor characteristic: CBCharacteristic, error: Error?) {
         switch characteristic.uuid {
         case CBUUID(string: "0x2A19"):
-            //Battery Level 特性的UUID 是0x2A19，类型是uint8，单位是百分比，最小值0，最大值是100，值101~255 为保留。
+            //Battery Level 特性的UUID 是0x2A19，類型是uint8，單位是百分比，最小值0，最大值是100，值101~255 為保留。
             //first get value method
             print("Battery level: \(characteristic.value![0])")
 
